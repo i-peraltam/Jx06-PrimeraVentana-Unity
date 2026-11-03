@@ -12,4 +12,10 @@ public class NavegacionEscenas : MonoBehaviour
     {
         SceneManager.LoadScene("PrimerEscenario");
     }
+
+    public void IrAProgramacionBotones()
+    {
+        SceneManager.LoadScene("ProgramacionBotones");
+    }
+
 }
