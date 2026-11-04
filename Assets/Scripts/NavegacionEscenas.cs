@@ -18,4 +18,18 @@ public class NavegacionEscenas : MonoBehaviour
         SceneManager.LoadScene("ProgramacionBotones");
     }
 
+    public void IrAAnimacionesLoop()
+    {
+        SceneManager.LoadScene("AnimacionesLoop");
+    }
+
+    public void IrADeteccionColisiones()
+    {
+        SceneManager.LoadScene("DeteccionColisiones");
+    }
+
+    public void IrAProyectoFinal()
+    {
+        SceneManager.LoadScene("ProyectoFinal");
+    }
 }

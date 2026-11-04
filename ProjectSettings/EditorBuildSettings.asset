@@ -14,6 +14,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ProgramacionBotones.unity
     guid: 966c9539f65e2db49a5202de30c284c7
+  - enabled: 1
+    path: Assets/Scenes/AnimacionesLoop.unity
+    guid: 7cd9b5c94c10c1e4ab74c5da8269006d
+  - enabled: 1
+    path: Assets/Scenes/DeteccionColisiones.unity
+    guid: eee0265aa6b62d645893c935d180a491
+  - enabled: 1
+    path: Assets/Scenes/ProyectoFinal.unity
+    guid: 3963a6bbc8d23904b94b8511fd417225
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

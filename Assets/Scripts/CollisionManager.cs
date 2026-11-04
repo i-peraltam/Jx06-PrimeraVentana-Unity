@@ -4,9 +4,12 @@ using UnityEngine.UI;
 public class CollisionManager : MonoBehaviour
 {
     private Image imagen;
-    private Color colorOriginal = Color.white;
+    private Color colorOriginal;
 
-    private void Awake()
+    public Animator brillo1Animator;
+    public Animator brillo2Animator;
+
+    void Awake()
     {
         imagen = GetComponent<Image>();
 
@@ -14,21 +17,25 @@ public class CollisionManager : MonoBehaviour
         {
             colorOriginal = imagen.color;
         }
-        else
-        {
-            Debug.LogError("CollisionManager: Joya no tiene componente Image.");
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Colisión detectada con: " + other.gameObject.name);
-
         if (other.CompareTag("Fuego"))
         {
             if (imagen != null)
             {
                 imagen.color = Color.red;
+            }
+
+            if (brillo1Animator != null)
+            {
+                brillo1Animator.SetBool("isActive", true);
+            }
+
+            if (brillo2Animator != null)
+            {
+                brillo2Animator.SetBool("isActive", true);
             }
 
             Debug.Log("La Joya entró en contacto con el fuego");
@@ -42,6 +49,16 @@ public class CollisionManager : MonoBehaviour
             if (imagen != null)
             {
                 imagen.color = colorOriginal;
+            }
+
+            if (brillo1Animator != null)
+            {
+                brillo1Animator.SetBool("isActive", false);
+            }
+
+            if (brillo2Animator != null)
+            {
+                brillo2Animator.SetBool("isActive", false);
             }
 
             Debug.Log("La Joya dejó de tocar el fuego");
